@@ -1,15 +1,15 @@
 username ?= mrbarker
 imagename ?= exercism-c
-tag ?= 0.1.2
+tag ?= 0.1.1
 
-all: doker-run
+all: docker-run
 
 docker-run:
 	mkdir -p $(CURDIR)/.config/exercism
 	docker run \
 		-dit \
 		-v $(CURDIR)/.config/exercism:/root/.config/exercism \
-		-v $(CURDIR):/workspace \
+		-v $(CURDIR):/root/exercism \
 		--name $(imagename) \
 		$(username)/$(imagename):$(tag)
 
