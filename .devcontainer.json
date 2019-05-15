@@ -3,5 +3,5 @@
 	"dockerComposeFile": "docker-compose.yml",
 	"service": "exercism",
 	"workspaceFolder": "/root/exercism",
-	"extensions": []
+	"extensions": ["ms-vscode.cpptools"]
 }
