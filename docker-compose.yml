@@ -1,0 +1,8 @@
+version: "3"
+services:
+  exercism:
+    image: mrbarker/exercism-c:0.1.1
+    volumes:
+      - ./.config/exercism:/root/.config/exercism
+      - ./:/root/exercism
+    tty: true
