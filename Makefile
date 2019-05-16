@@ -10,6 +10,7 @@ docker-run:
 		-dit \
 		-v $(CURDIR)/.config/exercism:/root/.config/exercism \
 		-v $(CURDIR):/root/exercism \
+		--privileged=true \
 		--name $(imagename) \
 		$(username)/$(imagename):$(tag)
 

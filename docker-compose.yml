@@ -6,3 +6,4 @@ services:
       - ./.config/exercism:/root/.config/exercism
       - ./:/root/exercism
     tty: true
+    privileged: true
