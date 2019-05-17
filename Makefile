@@ -2,9 +2,9 @@ username ?= mrbarker
 imagename ?= exercism-c
 tag ?= 0.1.1
 
-all: docker-run
+all: run
 
-docker-run:
+run:
 	mkdir -p $(CURDIR)/.config/exercism
 	docker run \
 		-dit \
@@ -15,14 +15,14 @@ docker-run:
 		--name $(imagename) \
 		$(username)/$(imagename):$(tag)
 
-docker-exec:
+shell:
 	docker exec -it $(imagename) bash --login
 
-docker-stop:
+stop:
 	docker stop $(imagename)
 
-docker-kill:
+kill:
 	docker kill $(imagename)
 
-docker-rm:
+rm:
 	docker rm $(imagename)
