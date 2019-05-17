@@ -1,28 +1,24 @@
-username ?= mrbarker
-imagename ?= exercism-c
-tag ?= 0.1.1
+# Makefile --- manager the exercism-c docker container
+# Mike Barker <mike@thebarkers.com>
+# May 17th, 2019
 
-all: run
+servicename ?= exercism
 
-run:
+.PHONY: all up shell stop down
+all: up
+
+up:
 	mkdir -p $(CURDIR)/.config/exercism
-	docker run \
-		-dit \
-		-v $(HOME)/.gitconfig:/root/.gitconfig \
-		-v $(CURDIR)/.config/exercism:/root/.config/exercism \
-		-v $(CURDIR):/root/exercism \
-		--privileged=true \
-		--name $(imagename) \
-		$(username)/$(imagename):$(tag)
+	docker-compose up -d
 
 shell:
-	docker exec -it $(imagename) bash --login
+	docker-compose exec $(servicename) bash --login
+
+start:
+	docker-compose start
 
 stop:
-	docker stop $(imagename)
+	docker-compose stop
 
-kill:
-	docker kill $(imagename)
-
-rm:
-	docker rm $(imagename)
+down:
+	docker-compose down
