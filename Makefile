@@ -8,6 +8,7 @@ docker-run:
 	mkdir -p $(CURDIR)/.config/exercism
 	docker run \
 		-dit \
+		-v $(HOME)/.gitconfig:/root/.gitconfig \
 		-v $(CURDIR)/.config/exercism:/root/.config/exercism \
 		-v $(CURDIR):/root/exercism \
 		--privileged=true \
