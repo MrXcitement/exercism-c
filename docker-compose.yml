@@ -7,4 +7,8 @@ services:
       - ./.config/exercism:/root/.config/exercism
       - ./:/root/exercism
     tty: true
-    privileged: true
+    # Required for ptrace-based debuggers like C++, Go, and Rust
+    cap_add:
+    - SYS_PTRACE
+    security_opt:
+    - seccomp:unconfined
