@@ -41,6 +41,9 @@ void test_word_count_one_word(void)
    char *input_text = "word";
    const int expected_word_count = 1;
 
+   // clear the actual solution
+   memset(actual_solution, 0, sizeof(actual_solution));     // clear to start with a known value
+
    // build the expected solution
    memset(expected_solution, 0, sizeof(expected_solution));     // clear to start with a known value
 
@@ -56,11 +59,14 @@ void test_word_count_one_word(void)
 
 void test_word_count_one_of_each_word(void)
 {
-   TEST_IGNORE();               // delete this line to run test
+   // TEST_IGNORE();               // delete this line to run test
    int index = 0;
    int actual_word_count;
    char *input_text = "one of each";
    const int expected_word_count = 3;
+
+   // clear the actual solution
+   memset(actual_solution, 0, sizeof(actual_solution));     // clear to start with a known value
 
    // build the expected solution
    memset(expected_solution, 0, sizeof(expected_solution));     // clear to start with a known value
@@ -83,11 +89,14 @@ void test_word_count_one_of_each_word(void)
 
 void test_word_count_multiple_occurrences_of_a_word(void)
 {
-   TEST_IGNORE();
+   // TEST_IGNORE();
    int index = 0;
    int actual_word_count;
    char *input_text = "one fish two fish red fish blue fish";
    const int expected_word_count = 5;
+
+   // clear the actual solution
+   memset(actual_solution, 0, sizeof(actual_solution));     // clear to start with a known value
 
    // build the expected solution
    memset(expected_solution, 0, sizeof(expected_solution));     // clear to start with a known value
@@ -115,11 +124,14 @@ void test_word_count_multiple_occurrences_of_a_word(void)
 
 void test_word_count_handles_cramped_lists(void)
 {
-   TEST_IGNORE();
+   // TEST_IGNORE();
    int index = 0;
    int actual_word_count;
    char *input_text = "one,two,three";
    const int expected_word_count = 3;
+
+   // clear the actual solution
+   memset(actual_solution, 0, sizeof(actual_solution));     // clear to start with a known value
 
    // build the expected solution
    memset(expected_solution, 0, sizeof(expected_solution));     // clear to start with a known value
@@ -141,11 +153,14 @@ void test_word_count_handles_cramped_lists(void)
 
 void test_word_count_handles_expanded_lists(void)
 {
-   TEST_IGNORE();
+   // TEST_IGNORE();
    int index = 0;
    int actual_word_count;
    char *input_text = "one,\ntwo,\nthree";
    const int expected_word_count = 3;
+
+   // clear the actual solution
+   memset(actual_solution, 0, sizeof(actual_solution));     // clear to start with a known value
 
    // build the expected solution
    memset(expected_solution, 0, sizeof(expected_solution));     // clear to start with a known value
@@ -167,11 +182,14 @@ void test_word_count_handles_expanded_lists(void)
 
 void test_word_count_ignore_punctuation(void)
 {
-   TEST_IGNORE();
+   // TEST_IGNORE();
    int index = 0;
    int actual_word_count;
    char *input_text = "car: carpet as java: javascript!!&@$%^&";
    const int expected_word_count = 5;
+
+   // clear the actual solution
+   memset(actual_solution, 0, sizeof(actual_solution));     // clear to start with a known value
 
    // build the expected solution
    memset(expected_solution, 0, sizeof(expected_solution));     // clear to start with a known value
@@ -199,11 +217,14 @@ void test_word_count_ignore_punctuation(void)
 
 void test_word_count_include_numbers(void)
 {
-   TEST_IGNORE();
+   // TEST_IGNORE();
    int index = 0;
    int actual_word_count;
    char *input_text = "testing, 1, 2 testing";
    const int expected_word_count = 3;
+
+   // clear the actual solution
+   memset(actual_solution, 0, sizeof(actual_solution));     // clear to start with a known value
 
    // build the expected solution
    memset(expected_solution, 0, sizeof(expected_solution));     // clear to start with a known value
@@ -225,11 +246,14 @@ void test_word_count_include_numbers(void)
 
 void test_word_count_normalize_case(void)
 {
-   TEST_IGNORE();
+   // TEST_IGNORE();
    int index = 0;
    int actual_word_count;
    char *input_text = "go Go GO Stop stop";
    const int expected_word_count = 2;
+
+   // clear the actual solution
+   memset(actual_solution, 0, sizeof(actual_solution));     // clear to start with a known value
 
    // build the expected solution
    memset(expected_solution, 0, sizeof(expected_solution));     // clear to start with a known value
@@ -248,11 +272,14 @@ void test_word_count_normalize_case(void)
 
 void test_word_count_with_apostrophes(void)
 {
-   TEST_IGNORE();
+   // TEST_IGNORE();
    int index = 0;
    int actual_word_count;
    char *input_text = "First: don't laugh. Then: don't cry.";
    const int expected_word_count = 5;
+
+   // clear the actual solution
+   memset(actual_solution, 0, sizeof(actual_solution));     // clear to start with a known value
 
    // build the expected solution
    memset(expected_solution, 0, sizeof(expected_solution));     // clear to start with a known value
@@ -280,11 +307,14 @@ void test_word_count_with_apostrophes(void)
 
 void test_word_count_with_quotation(void)
 {
-   TEST_IGNORE();
+   // TEST_IGNORE();
    int index = 0;
    int actual_word_count;
    char *input_text = "Joe can't tell between 'large' and large.";
    const int expected_word_count = 6;
+
+   // clear the actual solution
+   memset(actual_solution, 0, sizeof(actual_solution));     // clear to start with a known value
 
    // build the expected solution
    memset(expected_solution, 0, sizeof(expected_solution));     // clear to start with a known value
@@ -315,11 +345,14 @@ void test_word_count_with_quotation(void)
 
 void test_word_count_from_example(void)
 {
-   TEST_IGNORE();
+   // TEST_IGNORE();
    int index = 0;
    int actual_word_count;
    char *input_text = "olly olly in come free";
    const int expected_word_count = 4;
+
+   // clear the actual solution
+   memset(actual_solution, 0, sizeof(actual_solution));     // clear to start with a known value
 
    // build the expected solution
    memset(expected_solution, 0, sizeof(expected_solution));     // clear to start with a known value
@@ -344,13 +377,16 @@ void test_word_count_from_example(void)
 
 void test_max_length_word(void)
 {
-   TEST_IGNORE();
+   // TEST_IGNORE();
    int actual_word_count;
    int index = 0;
    char *input_text =
        "Look thisisaveeeeeerylongwordtypedwithoutusinganyspaces and look again, thisisaveeeeeerylongwordtypedwithoutusinganyspaces";
 
    const int expected_word_count = 4;
+
+   // clear the actual solution
+   memset(actual_solution, 0, sizeof(actual_solution));     // clear to start with a known value
 
    // build the expected solution
    memset(expected_solution, 0, sizeof(expected_solution));     // clear to start with a known value
@@ -376,7 +412,7 @@ void test_max_length_word(void)
 
 void test_excessive_length_word(void)
 {
-   TEST_IGNORE();
+   // TEST_IGNORE();
    int actual_word_count;
    int index = 0;
    char *input_text =
@@ -384,6 +420,9 @@ void test_excessive_length_word(void)
 
    const int expected_word_count = EXCESSIVE_LENGTH_WORD;
    word_count_word_t expected_solution[MAX_WORDS];
+
+   // clear the actual solution
+   memset(actual_solution, 0, sizeof(actual_solution));     // clear to start with a known value
 
    // build the expected solution
    memset(expected_solution, 0, sizeof(expected_solution));     // clear to start with a known value
@@ -398,13 +437,16 @@ void test_excessive_length_word(void)
 
 void test_max_number_words(void)
 {
-   TEST_IGNORE();
+   // TEST_IGNORE();
    int actual_word_count;
    int index = 0;
    char *input_text =
        "Once upon a time, a long while in the past, there lived a strange little man who could spin straw into gold";
 
    const int expected_word_count = 20;
+
+   // clear the actual solution
+   memset(actual_solution, 0, sizeof(actual_solution));     // clear to start with a known value
 
    // build the expected solution
    memset(expected_solution, 0, sizeof(expected_solution));     // clear to start with a known value
@@ -477,13 +519,16 @@ void test_max_number_words(void)
 
 void test_excessive_number_words(void)
 {
-   TEST_IGNORE();
+   // TEST_IGNORE();
    int actual_word_count;
    int index = 0;
    char *input_text =
        "Once upon a time, a long while in the past, there lived a strange little man who could spin straw into pure gold.";
 
    const int expected_word_count = EXCESSIVE_NUMBER_OF_WORDS;
+
+   // clear the actual solution
+   memset(actual_solution, 0, sizeof(actual_solution));     // clear to start with a known value
 
    // build the expected solution
    memset(expected_solution, 0, sizeof(expected_solution));     // clear to start with a known value
