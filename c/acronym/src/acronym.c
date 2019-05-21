@@ -8,7 +8,6 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include "string_builder.h"
 #include "acronym.h"
 
 const size_t MAX_ABBREVIATION_SIZE = 4;
